@@ -26,7 +26,19 @@ describe("compare number", function() {
 
         num1="1234";
         num2="1234";
-        expect(compare(num1,num2)).toBe('4A0B')
+        expect(compare(num1,num2)).toBe('4A0B');
+
+        num1="1234";
+        num2="4321";
+        expect(compare(num1,num2)).toBe('0A4B')
+
+        num1="1234";
+        num2="1324";
+        expect(compare(num1,num2)).toBe('2A2B')
+
+        num1="1234";
+        num2="4132";
+        expect(compare(num1,num2)).toBe('1A3B')
     });
 
 });

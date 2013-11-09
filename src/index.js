@@ -25,13 +25,13 @@ function click_compare(){
         }
         else{
             document.getElementById('btn_result').disabled='disabled'
+            document.getElementById('lab_result').value='您已用完次数';
             alert('您已用完次数');
         }
     }
     else{
         alert('请输入4位数字');
     }
-
 }
 
 function Random_Number(){

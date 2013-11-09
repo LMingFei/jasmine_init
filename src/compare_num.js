@@ -8,6 +8,12 @@
 function compare(num1,num2){
     var countA=0;
     var countB=0;
-    num1.toString().toArray();
-    console.log(num1)
+    var count=_.intersection(num1,num2).length;
+    for(var i=0;i<num1.length;i++){
+        if(num1[i]==num2[i]){
+            countA++;
+        }
+    }
+    countB=count-countA;
+    return countA+"A"+countB+"B";
 }

@@ -11,14 +11,14 @@ describe("random number", function() {
     it("should create a four figures ", function() {
 
 
-        var num=Random_Number();
+        var num=Random_Number().toString();
         var exp= /^\d{4}$/
         expect(exp.test(num)).toBe(true);
 
 
         var num_array=[];
         _.times(10,function(){
-            num_array.push(Random_Number());
+            num_array.push(Random_Number().toString());
         })
         var grouped_array=_.groupBy(num_array)
         var result=true
@@ -32,7 +32,7 @@ describe("random number", function() {
     it("should be  different figures",function(){
 
 
-        var num=Random_Number();
+        var num=Random_Number().toString();
         var result=Judge_figures_repeat(num);
         expect(result).toBe(false);
     })

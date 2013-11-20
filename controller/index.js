@@ -5,34 +5,7 @@
  * Time: 下午6:22
  * To change this template use File | Settings | File Templates.
  */
-function click_compare(){
-    var text=Input.get_input("tbx_input");
-    if(is_empty(text)){
-        if(play_count().get_count()<6){
-            play_count().ascending();
-            var result=compare(text,random_num().get_num());
-            if(result=='4A0B'){
-                Input.set_input('lab_result','恭喜获胜');
-                Input.set_input('lab_warn','恭喜获胜');
-                Input.disabled('btn_result');
-                return true;
-            }
 
-            else{
-                Input.set_input('lab_warn','您已竞猜'+play_count().get_count()+'次')
-                Input.set_input('lab_result',result);
-            }
-        }
-        else{
-            Input.disabled('btn_result');
-            Input.set_input('lab_result','您已用完次数');
-            alert('您已用完次数');
-        }
-    }
-    else{
-        alert('请输入4位数字');
-    }
-}
 
 
 
@@ -68,8 +41,8 @@ function Judge_figures_repeat(num){
 
 
 
-play_count().ascending=function(){
-    play_count().set_count(play_count().get_count()+1);
+play_count.ascending=function(){
+    play_count.set_count(play_count.get_count()+1);
 }
 
 

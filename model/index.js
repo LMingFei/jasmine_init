@@ -5,6 +5,9 @@
  * Time: 下午4:09
  * To change this template use File | Settings | File Templates.
  */
+
+
+
 function random_num(){
 
 }
@@ -26,23 +29,23 @@ function play_count(){
 
 }
 
-play_count().create=function(){
+play_count.create=function(){
     localStorage.count='0';
 }
 
-play_count().set_count=function(count){
+play_count.set_count=function(count){
     localStorage.count=count;
 }
 
-play_count().get_count=function(){
+play_count.get_count=function(){
     return localStorage.count;
 }
 
-function Input(){
+function Tbx(){
 
 }
 
-Input.get_input=function(input_name){
+Tbx.get_input=function(input_name){
     return document.getElementById(input_name).value;
 }
 
